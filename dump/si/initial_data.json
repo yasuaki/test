@@ -1,0 +1,62 @@
+[
+  {
+    "pk": 1, 
+    "model": "si.cpu", 
+    "fields": {
+      "abb": "Av", 
+      "name": "ACPU", 
+      "site": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "si.cpu", 
+    "fields": {
+      "abb": "Cv", 
+      "name": "CCPU", 
+      "site": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "si.si", 
+    "fields": {
+      "ver": "0.00.00.01", 
+      "end_date": null, 
+      "title": "1\u56de\u76ee\u7a74\u3042\u3051", 
+      "site": 1, 
+      "base_ver": null, 
+      "start_date": "2011-06-11 02:14:57", 
+      "cpu": 1, 
+      "git_branch": "master",
+      "git_tag": ""
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "si.fbu", 
+    "fields": {
+      "abb": "FBU-A", 
+      "name": "FBU-A", 
+      "site": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "si.fbu", 
+    "fields": {
+      "abb": "FBU-B", 
+      "name": "FBU-B", 
+      "site": 1
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "si.fbu", 
+    "fields": {
+      "abb": "FBU-C", 
+      "name": "FBU-C", 
+      "site": 1
+    }
+  }
+]

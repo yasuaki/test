@@ -164,10 +164,12 @@ INSTALLED_APPS = [
     # project
     "about",
     "profiles",
+    "si",
 ]
 
 FIXTURE_DIRS = [
     os.path.join(PROJECT_ROOT, "fixtures"),
+    os.path.join(PROJECT_ROOT, "dump/si"),
 ]
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
