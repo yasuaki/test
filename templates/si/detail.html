@@ -1,0 +1,60 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load ifsetting_tag %}
+
+{% block head_title %}{% trans "SI" %}/{{ cpu.name }}/{{ si.ver }}{% endblock %}
+
+{% block body %}
+	<form>
+	{% trans "CPU" %}:
+	<select>
+	{% for c in cpu_list %}
+		<option value="{{ c.id }}">{{ c.name }}
+	{% endfor %}
+	</select>
+
+	{% trans "ブランチ" %}:
+	<select>
+	{% for s in si_list %}
+		<option value="{{ s.id }}">{{ s.ver }}
+	{% endfor %}
+	</select>
+
+	<!--
+	{% trans "バージョン" %}:
+	<select>
+	{% for s in si_list %}
+		<option value="{{ s.id }}">{{ s.ver }}
+	{% endfor %}
+	</select>
+	-->
+
+	<input type="button" value="{% trans "表示" %}">
+	</form>
+
+	<br>
+
+	<table id="si_base_info" border="1" cellpadding="2">
+	<tr>
+		<th>{% trans "CPU" %}</th>
+		<td>{{ cpu.name }}</td>
+		<th>{% trans "ブランチ" %}</th>
+		<td>{{ si.git_branch }}</td>
+	</tr>
+	<tr>
+		<th>{% trans "バージョン" %}</th>
+		<td>{{ si.ver }}</td>
+		<th>{% trans "タイトル" %}</th>
+		<td>{{ si.title }}</td>
+	</tr>
+	</table>
+
+	<table id="si_stat_info" border="1" cellpadding="2">
+	<tr>
+	</tr>
+	</table>
+
+	<br>
+
+{% endblock %}
