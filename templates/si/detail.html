@@ -55,6 +55,12 @@
 	</tr>
 	</table>
 
+	{% for h in fburel_hist %}
+		commit:{{ h.commit }}<br>
+		user:{{ h.User }}<br>
+		fbu:{{ h.FBU }}<br>
+	{% endfor %}
+
 	<br>
 
 {% endblock %}
