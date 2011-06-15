@@ -50,9 +50,27 @@
 	</tr>
 	</table>
 
+	<br/>
 	<table id="si_stat_info" border="1" cellpadding="2">
+	<!-- title header -->
 	<tr>
+    <th>{% trans "FBU" %}</th>
+		{% for k,v in si_phase %}
+    <th>{{ v }}</th>
+		{% endfor %}
 	</tr>
+	<!-- fbu list -->
+	{% for atendfbu in atendfbu_list %}
+	<tr>
+		{% ifequal forloop.counter 1 %}
+		{% else %}
+		{% endifequal %}
+		<td>{{ atendfbu.fbu.name }}</td>
+		{% for k,v in si_phase %}
+    <td>{{ si_phase.k }}</td>
+		{% endfor %}
+	</tr>
+	{% endfor %}
 	</table>
 
 	{% for h in fburel_hist %}
